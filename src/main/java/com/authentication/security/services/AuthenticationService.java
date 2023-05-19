@@ -27,7 +27,6 @@ public class AuthenticationService {
                 .fullName(request.getFullName())
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
-                .role(request.getRole())
                 .build();
         userRepository.save(user);
         var jwtToken = jwtService.generateToken(user);
@@ -35,7 +34,6 @@ public class AuthenticationService {
                 .token(jwtToken)
                 .fullName(user.getFullName())
                 .email(user.getEmail())
-                .role(user.getRole())
                 .build();
     }
 
@@ -53,7 +51,6 @@ public class AuthenticationService {
                 .token(jwtToken)
                 .fullName(user.getFullName())
                 .email(user.getEmail())
-                .role(user.role)
                 .build();
 
     }
