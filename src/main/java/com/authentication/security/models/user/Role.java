@@ -1,5 +1,13 @@
 package com.authentication.security.models.user;
 
+public enum Role {
+    USER,
+}
+
+
+/*
+ package com.authentication.security.models.user;
+
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -48,3 +56,4 @@ public enum Role {
         return authorities;
     }
 }
+*/
